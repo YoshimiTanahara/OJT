@@ -1,0 +1,24 @@
+.picture {
+  position: relative;
+}
+
+.logo, .visual, .text {
+  position: absolute;
+}
+
+.logo {
+  z-index: 3;
+  left: 0; top: 0;
+}
+
+.text {
+  z-index: 2;
+margin-top: 346px;
+margin-left: 635px;
+}
+
+.visual {
+  z-index: 1;
+  margin-top: 110px;
+  margin-left: 50px;
+}
