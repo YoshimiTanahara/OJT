@@ -21,6 +21,9 @@
       </div>
     </section>
   </main>
+
+  <?php get_template_part('page', 'article'); ?>
+
   <footer></footer>
 </body>
 </html>
