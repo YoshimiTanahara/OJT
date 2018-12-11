@@ -14,6 +14,7 @@
       </div>
       <div class="visual">
         <img src="./img/visual_1_pc.png" alt="">
+          <p>進化し続ける「街」アメリカンビレッジマガジン</p>
       </div>
       <div class="text">
         <img src="./img/visual_text_pc.png" alt="">
