@@ -2,8 +2,8 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <link rel="stylesheet" href="css/app.css">
     <title>Document</title>
+    <link rel="stylesheet" href="<? echo get_template_directory_uri(); ?>/css/app.css">
 </head>
 <body>
   <header></header>

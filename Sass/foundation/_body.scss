@@ -1,0 +1,15 @@
+@mixin media($width: 768px) {
+    @media only screen and (max-width: $width) {
+        @content;
+    }
+}
+
+body {
+    width: 1152px;
+    @include media{
+        width: 100%;
+    }
+    margin: 0 auto;
+}
+
+
