@@ -1,0 +1,68 @@
+.articles-container {
+    // box-sizing: border-box;
+    // border: 1px #888 solid;
+
+    @mixin fontSize($pc, $sp) {
+        font-size: $pc;
+        @include media{
+            font-size: $sp;
+        }
+    }
+
+    .article-section-ttl {
+        text-align: center;
+        @include fontSize(30px, 60px);
+    }
+
+    .article-title {
+        font-weight: normal;
+        @include fontSize(16px, 32px);
+    }
+
+    nav {
+        text-align: right;
+    }
+
+    .readmore {
+        margin-right: 25px;
+        text-decoration: none;
+        @include fontSize(12px, 24px);
+        &::after {
+
+        }
+    }
+
+    .article-wrapper {
+            // box-sizing: border-box;
+            // border: 1px #888 solid;
+        padding: 0;
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+    .article-card {
+            // box-sizing: border-box;
+            // border: 1px #888 solid;
+        width: 347px;
+        height: 400px;
+        margin-right: 55px;
+        margin-bottom: 70px;
+        // border: solid 1px #333;
+        &:nth-child(3n){
+            margin-right: 0;
+        }
+        &:hover{
+            box-shadow: 0 0 10px #999;
+            transition: .3s;
+        }
+    }
+
+    // ◯◯ {
+    // box-shadow: 左右の向きpx  上下の向きpx ぼかしpx 広がりpx 色 内側指定;
+    // }
+
+// 例 .box {box-shadow: 2px 2px 4px -2px gray inset}
+
+
+
+} //articles-wrapperの中

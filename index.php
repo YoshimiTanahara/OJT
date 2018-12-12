@@ -2,9 +2,13 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <link rel="stylesheet" href="css/app.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.4.2/css/swiper.min.css">
+
+
     <title>Document</title>
+    <link rel="stylesheet" href="css/app.css">
+    <link rel="stylesheet" href="<? echo get_template_directory_uri(); ?>/css/app.css">
+<!-- Swiper -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.4.2/css/swiper.min.css">
 </head>
 <body>
   <header></header>
@@ -18,7 +22,6 @@
       </div>
 
       <!-- swiper -->
-
   <div class="swiper-wrapper">
     <div class="visual swiper-slide">
       <img src="./img/visual_1_pc.png" alt="">
