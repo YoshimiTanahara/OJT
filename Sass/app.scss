@@ -39,7 +39,7 @@
     }
 
     p .info {
-        @include font-size(24px,32px);
+        @include fontSize(24px,32px);
     }
 
     footer {
