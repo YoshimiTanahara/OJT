@@ -27,9 +27,27 @@
         margin-right: 25px;
         text-decoration: none;
         @include fontSize(12px, 24px);
-        &::after {
 
+        position: relative;
+        padding-bottom: 15px;
+        color: #000;
+
+        &::after {
+            display: block;
+            content: "";
+            background-color: #444;
+            height: 1px;
+            width: 25px;
+            position: absolute;
+            right: 0;
+            bottom: 0;
+            transition: .3s;
         }
+
+        &:hover::after {
+            width: 100%;
+        }
+
     }
 
     .article-wrapper {
@@ -43,9 +61,9 @@
     .article-card {
             // box-sizing: border-box;
             // border: 1px #888 solid;
-        width: 347px;
+        width: 320px;
         height: 400px;
-        margin-right: 55px;
+        margin-right: 65px;
         margin-bottom: 70px;
         // border: solid 1px #333;
         &:nth-child(3n){
@@ -55,6 +73,8 @@
             box-shadow: 0 0 10px #999;
             transition: .3s;
         }
+
+
     }
 
     // ◯◯ {

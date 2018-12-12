@@ -8,7 +8,7 @@
             <? while (have_posts()): the_post(); ?>
            <section class="article-card">
                 <?php if (has_post_thumbnail()): ?>
-                    <figure><?php the_post_thumbnail('thumbnail'); ?></figure>
+                    <div><?php the_post_thumbnail('middle'); ?></div>
                 <?php else: ?>
                     <figure><img src="ダミー画像を入れる" alt="dummy"></figure>
                 <?php endif; ?>
