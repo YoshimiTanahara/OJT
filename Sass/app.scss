@@ -21,12 +21,30 @@
 
 .text {
   z-index: 2;
-margin-top: 346px;
-margin-left: 635px;
+top: 346px;
+left: 635px;
 }
 
 .visual {
   z-index: 1;
-  margin-top: 110px;
-  margin-left: 50px;
+  top: 110px;
+  left: 50px;
+}
+
+p .info {
+  display: flex;
+  font-size: 24px;
+  // font-size: 32px;(sp)
+}
+
+footer {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  color: #fff;
+  height: 50px;
+  width: 100vw;
+  background-color: #000;
+  font-size: 16px;
+  // font-size: 24px(sp);
 }
