@@ -2,66 +2,9 @@
     // box-sizing: border-box;
     // border: 1px #888 solid;
 
-    @mixin fontSize($pc, $sp) {
-        font-size: $pc;
-        @include media{
-            font-size: $sp;
-        }
-    }
-
     .article-section-ttl {
         text-align: center;
         @include fontSize(30px, 60px);
-    }
-
-    time {
-        @include fontSize(16px, 32px);
-        padding-left: 15px;
-        @include media {
-        padding-top: 25px;
-        }
-    }
-
-    .article-title {
-        font-weight: normal;
-        padding-left: 15px;
-        @include fontSize(16px, 32px);
-    }
-
-
-    .readmore-container {
-        text-align: right;
-        padding-bottom: 15px;
-        position: absolute;
-            right: 0;
-            bottom: 0;
-
-    }
-
-    .readmore {
-        margin-right: 25px;
-        text-decoration: none;
-        @include fontSize(12px, 24px);
-
-        position: relative;
-        color: #000;
-
-        &::after {
-            display: block;
-            content: "";
-            background-color: #444;
-            height: 1px;
-            width: 25px;
-            position: absolute;
-            right: 0;
-            bottom: -8px;
-            transition: .3s;
-        }
-
-        &:hover::after {
-            width: 100%;
-        }
-
     }
 
     .article-wrapper {
@@ -69,57 +12,104 @@
             // border: 1px #888 solid;
         padding: 0;
         width: 1020px;
-        @include media{
-            width: 630px;
-        }
         margin: 0 auto;
         display: flex;
         flex-wrap: wrap;
-    }
 
-    .article-card {
-            // box-sizing: border-box;
-            // border: 1px #888 solid;
-        width: 320px;
-        height: 450px;
-        margin-right: 30px;
-        margin-bottom: 70px;
-        @include media {
+        @include media{
             width: 630px;
-            height: 780px;
-            margin-right: 0;
-            margin-bottom: 45px;
-        }
-        position: relative;
-        // border: solid 1px #333;
-        &:nth-child(3n){
-            margin-right: 0;
-        }
-        &:hover{
-            box-shadow: 0 0 10px #999;
-            transition: .3s;
         }
 
-        .thumbnail {
-            @include media{
-            width: 630px;
-            height: 400px;
+        .article-card {
+                // box-sizing: border-box;
+                // border: 1px #888 solid;
+            width: 320px;
+            height: 450px;
+            margin-right: 30px;
+            margin-bottom: 70px;
+            position: relative;
+
+            @include media {
+                width: 630px;
+                height: 780px;
+                margin-right: 0;
+                margin-bottom: 45px;
             }
-            img {
-                @include media {
-                    @extend .thumbnail;
+
+            &:nth-child(3n){
+                margin-right: 0;
+            }
+
+            &:hover{
+                box-shadow: 0 0 10px #999;
+                transition: .3s;
+            }
+
+            .thumbnail {
+                @include media{
+                width: 630px;
+                height: 400px;
                 }
-        }
-    // ◯◯ {
-    // box-shadow: 左右の向きpx  上下の向きpx ぼかしpx 広がりpx 色 内側指定;
-    // }
-    // 例 .box {box-shadow: 2px 2px 4px -2px gray inset}
-        }
-    }
+                img {
+                    @include media{
+                        width: 630px;
+                        height: 400px;
+                    }
+                }
+            }//.thumbnail
 
-    .no-article {
-        width: 1152px;
-        text-align: center;
-    }
+            time {
+                @include fontSize(16px, 32px);
+                padding-left: 15px;
+                @include media {
+                padding-top: 25px;
+                }
+            }
 
-} //articles-wrapperの中
+            .article-title {
+                font-weight: normal;
+                padding-left: 15px;
+                @include fontSize(16px, 32px);
+            }
+
+            .readmore-container {
+                text-align: right;
+                padding-bottom: 15px;
+                position: absolute;
+                    right: 0;
+                    bottom: 0;
+
+                .readmore {
+                    margin-right: 25px;
+                    text-decoration: none;
+                    @include fontSize(12px, 24px);
+
+                    position: relative;
+                    color: #000;
+
+                    &::after {
+                        display: block;
+                        content: "";
+                        background-color: #444;
+                        height: 1px;
+                        width: 25px;
+                        position: absolute;
+                        right: 0;
+                        bottom: -8px;
+                        transition: .3s;
+                    }
+
+                    &:hover::after {
+                        width: 100%;
+                    }
+                }
+            } //.readmore-container
+        } //.article-card
+
+        .no-article {
+            width: 1152px;
+            text-align: center;
+        }
+
+    } //.article-wrapper
+} //.atticles-container

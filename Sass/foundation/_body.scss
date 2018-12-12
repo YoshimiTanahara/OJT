@@ -1,9 +1,20 @@
+//レスポンシブ対応用パーツ
 @mixin media($width: 768px) {
     @media only screen and (max-width: $width) {
         @content;
     }
 }
 
+
+//レスポンシブ&PCとSP別のフォント用パーツ
+@mixin fontSize($pc, $sp) {
+    font-size: $pc;
+    @include media{
+        font-size: $sp;
+    }
+}
+
+//全体の横幅
 body {
     width: 1152px;
     margin: 0 auto;

@@ -13,12 +13,12 @@
                 <?php endif; ?>
                 <time><?php the_time('20y / m / d');?></time>
                 <h3 class="article-title"><?php the_title(); ?></h3>
-                <div class="readmore-container"><a href="" class="readmore">READ MORE</a></div>
+                <div class="readmore-container"><a href="<?php the_permalink(); ?>" class="readmore">READ MORE</a></div>
             </section>
             <?php endwhile; ?>
 
     <?php else: ?>
-    <div class="no-article"><p>投稿記事はまだありません</p></div>
+        <div class="no-article"><p>投稿記事はまだありません</p></div>
 
 
     <?php endif; ?>
