@@ -4,7 +4,9 @@
     <meta charset="UTF-8">
     <title><?php bloginfo('name'); ?></title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
     <link rel="stylesheet" href="<?php echo get_template_directory_uri(); ?>/css/app.css">
+
 <!-- Swiper -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.4.2/css/swiper.min.css">
   <?php
@@ -14,6 +16,28 @@
   ?>
 </head>
 <body>
+<<<<<<< HEAD
+  <header ?php body_class(); ?>
+    <div class="picture">
+      <div class="logo">
+        <img src="<?php echo get_template_directory_uri(); ?>./img/logo.png" alt="">
+      </div>
+    </div>
+
+<?php
+  $args = [
+  'menu' => 'navigation',
+  'container' => 'false',
+  'menu_class' => 'header-right'
+];
+wp_nav_menu($args);
+?>
+
+  <?php
+    wp_head();
+  ?>
+  </header>
+=======
     <header ?php body_class(); ?>
     <section class="picture">
         <div class="logo">
@@ -35,3 +59,4 @@
         ?>
     </div>
 </header>
+>>>>>>> master
