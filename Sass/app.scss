@@ -6,45 +6,49 @@
 
 //object
 
-.picture {
-  position: relative;
-}
+    @mixin fontSize($pc, $sp) {
+        font-size: $pc;
+        @include media{
+            font-size: $sp;
+        }
+    }
 
-.logo, .visual, .text {
-  position: absolute;
-}
+    .picture {
+        position: relative;
+    }
 
-.logo {
-  z-index: 3;
-  left: 0; top: 0;
-}
+    .logo, .visual, .text {
+        position: absolute;
+    }
 
-.text {
-  z-index: 2;
-top: 346px;
-left: 635px;
-}
+    .logo {
+        z-index: 3;
+        left: 0; top: 0;
+    }
 
-.visual {
-  z-index: 1;
-  top: 110px;
-  left: 50px;
-}
+    .text {
+    z-index: 2;
+    top: 346px;
+    left: 635px;
+    }
 
-p .info {
-  display: flex;
-  font-size: 24px;
-  // font-size: 32px;(sp)
-}
+    .visual {
+        z-index: 1;
+        top: 110px;
+        left: 50px;
+    }
 
-footer {
-  display: flex;
-  justify-content: center;
-  flex-direction: column;
-  color: #fff;
-  height: 50px;
-  width: 100vw;
-  background-color: #000;
-  font-size: 16px;
-  // font-size: 24px(sp);
-}
+    p .info {
+        @include font-size(24px,32px);
+    }
+
+    footer {
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        color: #fff;
+        height: 50px;
+        width: 100vw;
+        background-color: #000;
+        @include fontSize(16px,24px);
+    }
