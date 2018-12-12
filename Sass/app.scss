@@ -6,45 +6,68 @@
 
 //object
 
-.picture {
-  position: relative;
-}
+    @mixin fontSize($pc, $sp) {
+        font-size: $pc;
+        @include media{
+            font-size: $sp;
+        }
+    }
 
-.logo, .visual, .text {
-  position: absolute;
-}
+    .navigation {
+    display: flex;
+    justify-content: flex-end;
+    flex-direction: row;
+    height: 130px;
 
-.logo {
-  z-index: 3;
-  left: 0; top: 0;
-}
+    li {
+        list-style: none;
+        margin-right:5px;
+        font-weight: bold;
+        @include fontSize(14px,36px);
+    }
 
-.text {
-  z-index: 2;
-top: 346px;
-left: 635px;
-}
+    }
 
-.visual {
-  z-index: 1;
-  top: 110px;
-  left: 50px;
-}
+    .picture {
+        position: relative;
+    }
 
-p .info {
-  display: flex;
-  font-size: 24px;
-  // font-size: 32px;(sp)
-}
+    .logo, .text {
+        position: absolute;
+    }
 
-footer {
-  display: flex;
-  justify-content: center;
-  flex-direction: column;
-  color: #fff;
-  height: 50px;
-  width: 100vw;
-  background-color: #000;
-  font-size: 16px;
-  // font-size: 24px(sp);
-}
+    .logo {
+        z-index: 3;
+        left: 0; top: 0;
+    }
+
+    .text {
+        margin: 0 auto;
+        z-index: 2;
+        top: 346px;
+        left: 635px;
+    }
+
+    .visual {
+        width: 1020px;
+        margin: 0 auto;
+        z-index: 1;
+        top: 110px;
+        left: 50px;
+    }
+
+    p .info {
+        @include fontSize(24px,32px);
+    }
+
+    footer {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        color: #fff;
+        height: 120px;
+
+        background-color: #000;
+        @include fontSize(16px,24px);
+    }
