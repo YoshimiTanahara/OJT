@@ -15,7 +15,11 @@
     }
 
     time {
+        @include fontSize(16px, 32px);
         padding-left: 15px;
+        @include media {
+        padding-top: 25px;
+        }
     }
 
     .article-title {
@@ -80,6 +84,12 @@
         height: 450px;
         margin-right: 30px;
         margin-bottom: 70px;
+        @include media {
+            width: 630px;
+            height: 780px;
+            margin-right: 0;
+            margin-bottom: 45px;
+        }
         position: relative;
         // border: solid 1px #333;
         &:nth-child(3n){
@@ -90,15 +100,26 @@
             transition: .3s;
         }
 
-
-    }
-
+        .thumbnail {
+            @include media{
+            width: 630px;
+            height: 400px;
+            }
+            img {
+                @include media {
+                    @extend .thumbnail;
+                }
+        }
     // ◯◯ {
     // box-shadow: 左右の向きpx  上下の向きpx ぼかしpx 広がりpx 色 内側指定;
     // }
+    // 例 .box {box-shadow: 2px 2px 4px -2px gray inset}
+        }
+    }
 
-// 例 .box {box-shadow: 2px 2px 4px -2px gray inset}
-
-
+    .no-article {
+        width: 1152px;
+        text-align: center;
+    }
 
 } //articles-wrapperの中

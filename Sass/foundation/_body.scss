@@ -6,10 +6,10 @@
 
 body {
     width: 1152px;
+    margin: 0 auto;
     @include media{
         width: 100%;
     }
-    margin: 0 auto;
 }
 
 
