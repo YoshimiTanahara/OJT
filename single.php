@@ -1,5 +1,8 @@
 <?php get_header(); ?>
 
+<?php get_bloginfo('template_url').'/img/visual_3_sp.png' ?>
+
+
 
 <?php if(have_posts()): ?>
 
