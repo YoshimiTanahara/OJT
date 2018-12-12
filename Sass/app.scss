@@ -13,18 +13,17 @@
 
 .text {
   z-index: 2;
-top: 346px;
+top: 335px;
 left: 635px;
 }
 
 .visual {
   z-index: 1;
-  top: 110px;
-  left: 50px;
+  margin-top: 110px;
+  margin-left: 50px;
 }
 
 p .info {
-  display: flex;
   font-size: 24px;
   // font-size: 32px;(sp)
 }
