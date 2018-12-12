@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <link rel="stylesheet" href="<?php echo get_template_directory_uri(); ?>/css/app.css">
-
+    <link rel="stylesheet" href="<?php echo get_template_directory_uri(); ?>/foundation/_reset.scss">
 <!-- Swiper -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.4.2/css/swiper.min.css">
   <?php
