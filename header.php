@@ -16,28 +16,7 @@
   ?>
 </head>
 <body>
-<<<<<<< HEAD
-  <header ?php body_class(); ?>
-    <div class="picture">
-      <div class="logo">
-        <img src="<?php echo get_template_directory_uri(); ?>./img/logo.png" alt="">
-      </div>
-    </div>
 
-<?php
-  $args = [
-  'menu' => 'navigation',
-  'container' => 'false',
-  'menu_class' => 'header-right'
-];
-wp_nav_menu($args);
-?>
-
-  <?php
-    wp_head();
-  ?>
-  </header>
-=======
     <header ?php body_class(); ?>
     <section class="picture">
         <div class="logo">
@@ -59,4 +38,4 @@ wp_nav_menu($args);
         ?>
     </div>
 </header>
->>>>>>> master
+
