@@ -21,9 +21,18 @@
 
     li {
         list-style: none;
-        margin-right:5px;
         font-weight: bold;
+        font-family: monospace;
         @include fontSize(14px,36px);
+        margin-right:30px;
+        &:last-child {
+            margin-right: 0;
+        }
+    }
+
+    .color a {
+        color: #000;
+        text-decoration: none;
     }
 
     }
@@ -38,21 +47,22 @@
 
     .logo {
         z-index: 3;
-        left: 0; top: 0;
+        top: 10px;
+        left:10px;
     }
 
     .text {
         margin: 0 auto;
         z-index: 2;
-        top: 346px;
-        left: 635px;
+        top: 395px;
+        left: 800px;
     }
 
     .visual {
         width: 1020px;
         margin: 0 auto;
         z-index: 1;
-        top: 110px;
+        top: 150px;
         left: 50px;
     }
 
