@@ -14,13 +14,24 @@
         @include fontSize(30px, 60px);
     }
 
+    time {
+        margin-right: 25px;
+    }
+
     .article-title {
         font-weight: normal;
+        margin-right: 25px;
         @include fontSize(16px, 32px);
     }
 
-    nav {
+
+    .readmore-container {
         text-align: right;
+        padding-bottom: 15px;
+        position: absolute;
+            right: 0;
+            bottom: 0;
+
     }
 
     .readmore {
@@ -29,7 +40,6 @@
         @include fontSize(12px, 24px);
 
         position: relative;
-        padding-bottom: 15px;
         color: #000;
 
         &::after {
@@ -40,7 +50,7 @@
             width: 25px;
             position: absolute;
             right: 0;
-            bottom: 0;
+            bottom: -8px;
             transition: .3s;
         }
 
@@ -54,6 +64,11 @@
             // box-sizing: border-box;
             // border: 1px #888 solid;
         padding: 0;
+        width: 1020px;
+        @include media{
+            width: 630px;
+        }
+        margin: 0 auto;
         display: flex;
         flex-wrap: wrap;
     }
@@ -62,9 +77,10 @@
             // box-sizing: border-box;
             // border: 1px #888 solid;
         width: 320px;
-        height: 400px;
-        margin-right: 65px;
+        height: 450px;
+        margin-right: 15px;
         margin-bottom: 70px;
+        position: relative;
         // border: solid 1px #333;
         &:nth-child(3n){
             margin-right: 0;
