@@ -2,14 +2,14 @@
 
     <main>
             <div class="text">
-                <img class= src="<?php echo get_template_directory_uri(); ?>/img/visual_text_pc.png" alt="pc">
-                <!-- <img class= src="<?php echo get_template_directory_uri(); ?>/img/visual_text_sp.png" alt="sp"> -->
+                <img class="textpc"src="<?php echo get_template_directory_uri(); ?>/img/visual_text_pc.png" alt="pc">
+                <img class="textsp" src="<?php echo get_template_directory_uri(); ?>/img/visual_text_sp.png" alt="sp">
             </div>
 
       <!-- swiper -->
             <div class="visual">
-                <img class= src="<?php echo get_template_directory_uri(); ?>/img/visual_1_pc.png" alt="pc">
-                <!-- <img class="sp" src="<?php echo get_template_directory_uri(); ?>/img/visual_1_sp.png" alt="sp"> -->
+                <img src="<?php echo get_template_directory_uri(); ?>/img/visual_1_pc.png" alt="pc">
+              <!--   <img src="<?php echo get_template_directory_uri(); ?>/img/visual_1_sp.png" alt="sp"> -->
 
                 <p class="info">進化し続ける「街」アメリカンビレッジマガジン</p>
             </div>

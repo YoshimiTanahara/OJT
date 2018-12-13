@@ -18,14 +18,8 @@
 body {
     width: 1152px;
     margin: 0 auto;
+    
     @include media{
         width: 100%;
     }
-<<<<<<< HEAD
-    margin: 0 auto;
 }
-=======
-}
-
-
->>>>>>> a6dd6508e622ba528b7883a26e8d67ca757fdcb8
