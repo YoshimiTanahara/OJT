@@ -1,6 +1,6 @@
 <?php get_header(); ?>
 
-<?php get_bloginfo('template_url').'/img/visual_3_sp.png' ?>
+<figure class="custom-image-test"><img src="<?php header_image(); ?>" height="<?php echo get_custom_header()->height; ?>" width="<?php echo get_custom_header()->width; ?>" alt="" /></figure>
 
 
 
