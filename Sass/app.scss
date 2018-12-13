@@ -13,6 +13,16 @@
         }
     }
 
+/* パソコンで見たときは"pc"のclassがついた画像が表示される */
+// .pc { display: block !important; }
+// .sp { display: none !important; }
+/* スマートフォンで見たときは"sp"のclassがついた画像が表示される */
+// @media only screen and (max-width: 768px) {
+//     img { max-width: 100%; }
+//     .pc { display: none !important; }
+//     .sp { display: block !important; }
+//     }
+
     .navigation {
     display: flex;
     justify-content: flex-end;
@@ -56,14 +66,20 @@
         z-index: 2;
         top: 395px;
         left: 800px;
+        
     }
 
     .visual {
-        width: 1020px;
-        margin: 0 auto;
+        // width: 1020px;
+        text-align: center;
         z-index: 1;
         top: 150px;
         left: 50px;
+        img {
+            @include media {
+                width: 100%;
+            }
+        }
     }
 
     p .info {
