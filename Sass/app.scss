@@ -7,14 +7,7 @@
 @import "layout/_pagearticle";
 @import "layout/_singlepage";
 
-//object
 
-    @mixin fontSize($pc, $sp) {
-        font-size: $pc;
-        @include media{
-            font-size: $sp;
-        }
-    }
 
 
 /* パソコンで見たときは"pc"のclassがついた画像が表示される */
@@ -28,12 +21,11 @@
 //     }
 
 
-
-    .picture {
+    .picture-container {
         position: relative;
     }
 
-    .logo, .text {
+    .text {
         position: absolute;
     }
 
