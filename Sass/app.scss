@@ -29,7 +29,7 @@
 
 
 
-    .picture {
+    .picture-container {
         position: relative;
     }
 
@@ -41,8 +41,8 @@
     .text {
         margin: 0 auto;
         z-index: 2;
-        top: 395px;
-        left: 800px;
+        top: 235px;
+        left: 655px;
         @include media {
             top:10px;
             left: 10px;
@@ -59,12 +59,13 @@
             @include media {
                 display: block;
                 position: absolute;
+                height: 80px;
+                width: 200px;
             }
         }
     }
 
     .visual {
-        // width: 1020px;
         text-align: center;
         z-index: 1;
         top: 150px;
@@ -76,9 +77,23 @@
         }
     }
 
-    p .info {
+    .info {
+        display: inline-block;
+        padding: 10px;
+        margin-bottom: 50px;
+        // text-indent: 1em;
+
         @include fontSize(24px,32px);
-    }
+        @include media {
+            text-indent: 0em;
+            display: flex;
+            justify-content: center;
+            margin-bottom: 10px;
+            &:last-child {
+                margin-bottom: 30px;
+            }
+            }
+        }
 
     footer {
         display: flex;
