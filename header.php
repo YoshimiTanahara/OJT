@@ -18,7 +18,7 @@
 <body>
 
     <header ?php body_class(); ?>
-    <section class="picture">
+    <section class="header-nav">
         <div class="logo">
             <img src="<?php echo get_template_directory_uri(); ?>/img/logo.png" alt="">
         </div>
