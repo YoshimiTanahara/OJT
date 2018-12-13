@@ -8,6 +8,7 @@
 
 //レスポンシブ&PCとSP別のフォント用パーツ
 @mixin fontSize($pc, $sp) {
+    font-family: 'YuGothic', sans-serif;
     font-size: $pc;
     @include media{
         font-size: $sp;
@@ -18,7 +19,6 @@
 body {
     width: 1152px;
     margin: 0 auto;
-    
     @include media{
         width: 100%;
     }

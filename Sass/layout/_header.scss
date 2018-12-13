@@ -1,22 +1,28 @@
 // Header
-
 .header-nav {
+    position: relative;
     @include media {
-        height: 250px;
+        height: 280px;
         display: flex;
         justify-content: center;
     }
 
+    .logo {
+        z-index: 20; //.navigationと同じスタック文脈
+        position: absolute;
+            top: 0;
+            left: 0;
+        @include media{
+            position: static; //PC画面ではpositionで指定していたので、初期化
+        }
+    }
+
     .navigation {
-        // // width: 1152px;
-        // // height: 130px;
-        // margin: 0 auto;
+        z-index: 10; //.logoと同じスタック文脈
         display: flex;
         align-items: center;
         justify-content: flex-end;
         height: 130px;
-
-
 
         .navi-list {
             display: flex;
@@ -44,5 +50,4 @@
             }
         }
     }
-
-}
+} // header
