@@ -1,7 +1,9 @@
 //foundation
+@import "foundation/_reset";
 @import "foundation/_body";
 
 //layout
+@import "layout/_header";
 @import "layout/_pagearticle";
 @import "layout/_singlepage";
 
@@ -14,29 +16,7 @@
         }
     }
 
-    .navigation {
-    display: flex;
-    justify-content: flex-end;
-    flex-direction: row;
-    height: 130px;
 
-    li {
-        list-style: none;
-        font-weight: bold;
-        font-family: monospace;
-        @include fontSize(14px,36px);
-        margin-right:30px;
-        &:last-child {
-            margin-right: 0;
-        }
-    }
-
-    .color a {
-        color: #000;
-        text-decoration: none;
-    }
-
-    }
 
     .picture {
         position: relative;

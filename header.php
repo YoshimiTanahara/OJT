@@ -28,7 +28,7 @@
         $args = [
         'menu' => 'navigation',
         'container' => 'false',
-        'menu_class' => 'navigation'
+        'menu_class' => 'navi-list'
         ];
         wp_nav_menu($args);
         ?>
