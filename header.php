@@ -17,25 +17,25 @@
 </head>
 <body>
 
-<header class="header-layer">
-    <section class="header-nav">
-        <div class="navigation">
-        <?php
-            $args = [
-            'menu' => 'navigation',
-            'container' => 'false',
-            'menu_class' => 'navi-list'
-            ];
-            wp_nav_menu($args);
-            ?>
+    <header class="header-layer">
+        <section class="header-nav">
+            <div class="navigation">
+                <?php
+                    $args = [
+                    'menu' => 'navigation',
+                    'container' => 'false',
+                    'menu_class' => 'navi-list'
+                    ];
+                    wp_nav_menu($args);
+                    ?>
 
-            <?php
-            wp_head();
-            ?>
-        </div>
-        <div class="logo">
-            <img src="<?php echo get_template_directory_uri(); ?>/img/logo.png" alt="">
-        </div>
-    </section>
-</header>
+                    <?php
+                    wp_head();
+                ?>
+            </div>
+            <div class="logo">
+                <img src="<?php echo get_template_directory_uri(); ?>/img/logo.png" alt="">
+            </div>
+        </section>
+    </header>
 
