@@ -17,7 +17,7 @@
 </head>
 <body>
 
-    <header class="header-layer">
+    <header>
         <section class="header-nav">
             <!-- ナビゲーションバー -->
             <div class="navigation">
@@ -34,12 +34,12 @@
                     wp_head();
                 ?>
             </div>
-            <!-- ハンバーガーメニュー -->
-            <div id="hbToggle" class="js-hamburger hamburger on"><span></span></div>
             <!-- ロゴ -->
             <div class="logo">
                 <img src="<?php echo get_template_directory_uri(); ?>/img/logo.png" alt="">
             </div>
         </section>
+    <!-- ハンバーガーメニュー -->
+        <div id="hbToggle" class="js-hamburger hamburger"><span></span></div>
     </header>
 
