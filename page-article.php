@@ -10,9 +10,9 @@
                     <?php else: ?>
                         <div><p>投稿記事はまだありません</p></div>
                     <?php endif; ?>
-                    <div class="post-time"><time><?php the_time('Y / m / d');?></time></div>
-                    <h3 class="article-title"><?php the_title(); ?></h3>
-                    <div class="readmore-container"><a href="<?php the_permalink(); ?>" class="readmore">READ MORE</a></div>
+                        <div class="post-time"><time><?php the_time('Y / m / d');?></time></div>
+                        <h3 class="article-title"><?php the_title(); ?></h3>
+                        <div class="readmore-container"><a href="<?php the_permalink(); ?>" class="readmore">READ MORE</a></div>
                 </section>
             <?php endwhile; ?>
         <?php else: ?>
