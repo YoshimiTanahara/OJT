@@ -8,4 +8,17 @@ $(function(){
   },
   effect: 'fade',
   })
-});
+
+
+
+
+
+// ハンバーガーメニュー
+   console.log('app.jpチェック');
+
+
+
+
+
+
+}); //jQuery閉じタグ
