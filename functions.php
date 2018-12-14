@@ -12,7 +12,7 @@
 $defaults = array(
     'default-image'          => '',
     'random-default'         => false,
-    'width'                  => '1020px',
+    'width'                  => '1024px',
     'height'                 => '450px',
     'flex-height'            => false,
     'flex-width'             => false,
