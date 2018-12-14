@@ -10,7 +10,7 @@
 <!-- Swiper -->
         <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.4.2/js/swiper.min.js"></script>
 <!-- local js -->
-        <script src="app.js"></script>
+        <script src="<?php echo get_template_directory_uri(); ?>/app.js"></script>
 
     </body>
 </html>

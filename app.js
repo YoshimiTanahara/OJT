@@ -1,11 +1,11 @@
 $(function(){
   let mySwiper = new Swiper('.swiper-container',{
-  direction: 'horizontal',
-  loop: true,
-  autoplay: {
-    delay: 3000,
-    disableOnInteraction: true,
-  },
-  effect: 'fade',
-  })
-});
+      slidesPerView: 4,
+      loop: true,
+      autoplay: {
+        delay:3000,
+        stopOnLast: false,
+      },
+      effect: 'fade',
+      })
+    });
