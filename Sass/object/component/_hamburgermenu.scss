@@ -4,18 +4,19 @@ header {
     position: relative;
 }
 
-
 .hamburger {
     display: none;
-    
+
     @include media {
         display: block;
-        position: absolute;
-            right: 20px;
-            bottom: 140px;
         width: 30px;
-        align-self: center;
-        text-align: right;
+        height: 25px;
+        position: absolute;
+            right: 30px;
+            bottom: 140px;
+        cursor: pointer;
+        // align-self: center;
+        // text-align: right;
 
         span,
         span::after,
@@ -44,15 +45,15 @@ header {
             @extend span::before;
             top: 9px;
         }
-    }
 
-    &.on span {
-        background-color: transparent;
-        &:before {
-            transform: rotate(45deg) translate(-4px, 6px);
-        }
-        &:after {
-            transform: rotate(-45deg) translate(5px, -11px);
-        }
-    }
+        &.on span {
+            background-color: transparent;
+            &:before {
+                transform: rotate(45deg) translate(5px, 5px);
+            }
+            &:after {
+                transform: rotate(-45deg) translate(7px, -8px);
+            }
+        } //クリックされて.onがついた時
+    } //windowがSPサイズの時
 }
