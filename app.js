@@ -24,6 +24,9 @@ $(function(){
         $('.js-hamburger').toggleClass('on');
     };
 
+    
+
+
 
    }); //ハンバーガーメニュークリックの時の挙動
 

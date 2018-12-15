@@ -13,7 +13,7 @@ header {
         height: 25px;
         position: absolute;
             right: 30px;
-            bottom: 140px;
+            top: 140px;
         cursor: pointer;
         // align-self: center;
         // text-align: right;
@@ -56,4 +56,31 @@ header {
             }
         } //クリックされて.onがついた時
     } //windowがSPサイズの時
+} //hamburgerメニューの三本線
+
+
+
+// ドロワーメニュー
+.drower {
+    display: none;
+    @include media{
+        display: block;
+        width: 100%;
+
+        .menu-item {
+            text-align: center;
+            background-color: rgba(#333, .1);
+            a {
+                @include fontSize(14px, 36px);
+                text-decoration: none;
+                color: #333;
+                line-height: 65px;
+                padding: 15px;
+                &:hover {
+                    cursor: pointer;
+                }
+            }
+        }
+    }
 }
+

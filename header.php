@@ -41,5 +41,12 @@
         </section>
     <!-- ハンバーガーメニュー -->
         <div id="hbToggle" class="js-hamburger hamburger"><span></span></div>
+            <div id="drower-bg"></div>
+        <ul class="drower js-drower">
+            <?php
+                wp_nav_menu($args);
+                wp_head(); 
+            ?>
+        </ul>
     </header>
 
