@@ -7,7 +7,9 @@
 @import "layout/_pagearticle";
 @import "layout/_singlepage";
 
-
+//object
+////component
+@import "object/component/_hamburgermenu";
 
 
 /* パソコンで見たときは"pc"のclassがついた画像が表示される */
@@ -72,6 +74,7 @@
         display: inline-block;
         padding: 10px;
         margin-bottom: 50px;
+        line-height: 1.5;
         // text-indent: 1em;
 
         @include fontSize(24px,32px);

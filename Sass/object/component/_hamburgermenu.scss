@@ -1,0 +1,147 @@
+// ハンバーガーメニュー
+
+main {
+}
+
+header {
+    position: relative;
+    z-index: 20;
+
+
+    .header-nav {
+        background-color: #fff;
+        z-index: 20; //dowerで出てくるnavigationbarより前
+    }
+}
+
+.hamburger {
+    display: none;
+    z-index: 30; //#dower-bgや.header-navより前にだす
+
+    @include media {
+        display: block;
+        width: 30px;
+        height: 25px;
+        position: absolute;
+            right: 30px;
+            top: 140px;
+        cursor: pointer;
+        // align-self: center;
+        // text-align: right;
+
+        span,
+        span::after,
+        span::before {
+            width: 100%;
+            height: 4px;
+            background-color: #333;
+            border-radius: 3px;
+            transition: all .5s;
+            backface-visibility: hidden;
+        }
+
+        span {
+            position: relative;
+            display: block;
+        }
+
+        span::before {
+            content: "";
+            position: absolute;
+            left: 0;
+            top: -9px;
+        }
+
+        span:after {
+            @extend span::before;
+            top: 9px;
+        }
+
+        &.on span {
+            background-color: transparent;
+            &:before {
+                transform: rotate(45deg) translate(5px, 5px);
+            }
+            &:after {
+                transform: rotate(-45deg) translate(7px, -8px);
+            }
+        } //クリックされて.onがついた時
+    } //windowがSPサイズの時
+} //hamburgerメニューの三本線
+
+
+
+// ドロワーメニュー
+.drower-bg {
+    display: none;
+    @include media {
+        display: block;
+        width: 100%;
+        height: 100vh;
+        position: fixed;
+            top: 260px;
+            right: 0;
+            left: 0;
+            bottom: 0;
+        background-color: rgba(#333, .6);
+    }
+}
+
+
+.drower {
+    display: none;
+    @include media{
+        // background-color: rgba(#000, .3);
+        z-index: 10px; //.header-navより後ろ
+        display: block;
+        width: 100%;
+        position: absolute;
+            top: -280px;
+        transition-duration: 600ms;
+
+
+        .menu-item {
+            text-align: center;
+            background-color:#ccc;
+            a {
+                @include fontSize(14px, 36px);
+                text-decoration: none;
+                color: #333;
+                line-height: 65px;
+                padding: 15px;
+                &:hover {
+                    cursor: pointer;
+                }
+            }
+        }
+
+        &.on {
+            top: 280px;
+            transition-duration: 600ms;
+        }
+    } //SPサイズの時のスタイル
+}
+
+#drower-bg{
+    display: none;
+    @include media {
+        display: none; //jsで制御
+
+        position: fixed;
+            top: 280px;
+            right: 0;
+            left: 0;
+            bottom: 0;
+        width: 100%;
+        height: 100vh;
+        background-color: rgba(#000, .7);
+        transition-duration: 600ms;
+    }
+}
+
+//ハンバーガーメニューでdrowerが出たら、後ろをスクロールできないようにする。jsで制御。
+.scroll-prevent {
+    position: fixed;
+    width: 100%;
+    height: 100vh;
+}
