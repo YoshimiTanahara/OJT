@@ -18,7 +18,6 @@
                         <h3 class="article-title"><?php the_title(); ?></h3>
                         <div class="readmore-container"><a href="<?php the_permalink(); ?>"class="readmore">READ MORE</a></div>
                     </div>
-
                 </section>
             <?php endwhile; ?>
         <?php else: ?>
