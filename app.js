@@ -19,19 +19,15 @@ $(function(){
    $('.js-hamburger').on('click', function() {
     let isActive = $(this).hasClass('on');
     if (isActive) {
-        $('.js-hamburger').toggleClass('on');
+        $('#drower-bg').fadeOut(600);
     } else {
-        $('.js-hamburger').toggleClass('on');
+        $('#drower-bg').fadeIn(600);
     };
-
-    
-
-
+    $(document.body).toggleClass('scroll-prevent');
+    $('.js-hamburger').toggleClass('on');
+    $('.js-drower').toggleClass('on');
+    $('#drower-bg').toggleClass('on');
 
    }); //ハンバーガーメニュークリックの時の挙動
-
-
-
-
 
 }); //jQuery閉じタグ

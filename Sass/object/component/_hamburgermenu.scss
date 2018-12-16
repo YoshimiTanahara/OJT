@@ -1,11 +1,22 @@
 // ハンバーガーメニュー
 
+main {
+}
+
 header {
     position: relative;
+    z-index: 20;
+
+
+    .header-nav {
+        background-color: #fff;
+        z-index: 20; //dowerで出てくるnavigationbarより前
+    }
 }
 
 .hamburger {
     display: none;
+    z-index: 30; //#dower-bgや.header-navより前にだす
 
     @include media {
         display: block;
@@ -61,15 +72,37 @@ header {
 
 
 // ドロワーメニュー
+.drower-bg {
+    display: none;
+    @include media {
+        display: block;
+        width: 100%;
+        height: 100vh;
+        position: fixed;
+            top: 260px;
+            right: 0;
+            left: 0;
+            bottom: 0;
+        background-color: rgba(#333, .6);
+    }
+}
+
+
 .drower {
     display: none;
     @include media{
+        // background-color: rgba(#000, .3);
+        z-index: 10px; //.header-navより後ろ
         display: block;
         width: 100%;
+        position: absolute;
+            top: -280px;
+        transition-duration: 600ms;
+
 
         .menu-item {
             text-align: center;
-            background-color: rgba(#333, .1);
+            background-color:#ccc;
             a {
                 @include fontSize(14px, 36px);
                 text-decoration: none;
@@ -81,6 +114,34 @@ header {
                 }
             }
         }
+
+        &.on {
+            top: 280px;
+            transition-duration: 600ms;
+        }
+    } //SPサイズの時のスタイル
+}
+
+#drower-bg{
+    display: none;
+    @include media {
+        display: none; //jsで制御
+
+        position: fixed;
+            top: 280px;
+            right: 0;
+            left: 0;
+            bottom: 0;
+        width: 100%;
+        height: 100vh;
+        background-color: rgba(#000, .7);
+        transition-duration: 600ms;
     }
 }
 
+//ハンバーガーメニューでdrowerが出たら、後ろをスクロールできないようにする。jsで制御。
+.scroll-prevent {
+    position: fixed;
+    width: 100%;
+    height: 100vh;
+}
