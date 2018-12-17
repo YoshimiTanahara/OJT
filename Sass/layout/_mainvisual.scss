@@ -1,0 +1,77 @@
+/* パソコンで見たときは"pc"のclassがついた画像が表示される */
+// .pc { display: block !important; }
+// .sp { display: none !important; }
+/* スマートフォンで見たときは"sp"のclassがついた画像が表示される */
+// @media only screen and (max-width: 768px) {
+//     img { max-width: 100%; }
+//     .pc { display: none !important; }
+//     .sp { display: block !important; }
+//     }
+
+    .picture-container {
+        position: relative;
+    }
+
+    .text {
+        position: absolute;
+    }
+
+
+    .text {
+        margin: 0 auto;
+        z-index: 2;
+        top: 235px;
+        left: 655px;
+        @include media {
+            top:10px;
+            left: 10px;
+            border: 1px solid #000;
+        }
+        .textpc {
+            display: block;
+            @include media {
+                display: none;
+            }
+        }
+        .textsp {
+            display: none;
+            @include media {
+                display: block;
+                position: absolute;
+                height: 80px;
+                width: 200px;
+            }
+        }
+    }
+
+    .visual {
+        text-align: center;
+        z-index: 1;
+        top: 150px;
+        left: 50px;
+        img {
+            @include media {
+                width: 100%;
+            }
+        }
+    }
+
+    .info {
+        display: inline-block;
+        padding: 10px;
+        margin-bottom: 50px;
+        line-height: 1.5;
+        // text-indent: 1em;
+
+        @include fontSize(24px,32px);
+        @include media {
+            text-indent: 0em;
+            display: flex;
+            justify-content: center;
+            margin-bottom: -5px;
+            &:last-child {
+                margin-bottom: 30px;
+            }
+            }
+        }
+
