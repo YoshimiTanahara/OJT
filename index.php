@@ -4,7 +4,7 @@
 <main>
     <div class="picture-container">
         <div class="text">
-            <img class="textpc"src="<?php echo get_template_directory_uri(); ?>/img/visual_text_pc.png" alt="pc">
+            <img class="textpc" src="<?php echo get_template_directory_uri(); ?>/img/visual_text_pc.png" alt="pc">
             <img class="textsp" src="<?php echo get_template_directory_uri(); ?>/img/visual_text_sp.png" alt="sp">
         </div>
 
@@ -13,12 +13,14 @@
         <div class="swiper-wrapper">
             <div class="swiper-slide">
                 <div class="visual">
-                    <img src="<?php echo get_template_directory_uri(); ?>/img/visual_1_pc.png" alt="pc">
+                    <img class="visual-pc" src="<?php echo get_template_directory_uri(); ?>/img/visual_1_pc.png" alt="pc">
+                     <img class="visual-sp" src="<?php echo get_template_directory_uri(); ?>/img/visual_1_sp.png" alt="pc">
                 </div>
             </div>
             <div class="swiper-slide">
                 <div class="visual">
-                    <img src="<?php header_image(); ?>" height="<?php echo get_custom_header()->height; ?>" width="<?php echo get_custom_header()->width; ?>" alt="" />
+                    <img class="visual-pc" src="<?php echo get_template_directory_uri(); ?>/img/visual_7_pc.png" alt="pc">
+                     <img class="visual-sp" src="<?php echo get_template_directory_uri(); ?>/img/visual_7_sp.png" alt="pc">
                 </div>
             </div>
         </div>
