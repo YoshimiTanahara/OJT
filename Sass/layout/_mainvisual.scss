@@ -49,6 +49,9 @@
         z-index: 1;
         top: 150px;
         margin-left: 65px;
+        @include media {
+            margin-left: 0;
+        }
 
         .visual-pc {
             display: block;
@@ -82,6 +85,7 @@
 
         @include fontSize(24px,32px);
         @include media {
+            text-align: center;
             text-indent: 0em;
             display: flex;
             justify-content: center;
@@ -99,5 +103,12 @@
     .swiper-wrapper {
         @extend .swiper-container;
 
+    }
+
+    .bar {
+        display: none;
+        @include media{
+            display: block;
+        }
     }
 
