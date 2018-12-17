@@ -27,8 +27,7 @@
     </div>
     </div>
 
-        <p class="info">進化し続ける「街」</p>
-        <p class="info">アメリカンビレッジマガジン</p>
+        <p class="info">進化し続ける「街」<br class="bar">アメリカンビレッジマガジン</p>
 </main>
 
 <?php get_template_part('page', 'article'); ?>
